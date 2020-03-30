@@ -1,0 +1,69 @@
+{
+  "window.zoomLevel": 0,
+  "editor.fontSize": 16,
+  "files.autoSave": "afterDelay",
+  "glassit.alpha": 210,
+  "workbench.colorCustomizations": {},
+  "editor.formatOnPaste": true,
+  "editor.smoothScrolling": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.mouseWheelZoom": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "python.formatting.provider": "black",
+  "typescript.locale": "en",
+  "editor.minimap.enabled": true,
+  "C_Cpp.clang_format_fallbackStyle": "Google",
+  "git.confirmSync": false,
+  "code-runner.runInTerminal": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.formatOnSaveTimeout": 1000,
+  "editor.formatOnSave": true,
+  "dart.previewFlutterUiGuides": true,
+  "dart.previewFlutterUiGuidesCustomTracking": true,
+  "editor.fontFamily": "Fira Code",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.iconTheme": "eq-material-theme-icons",
+  "workbench.tree.indent": 15,
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.view.alwaysShowHeaderActions": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.menuBarVisibility": "toggle",
+  "workbench.statusBar.visible": true,
+  "javascript.validate.enable": false,
+  "dart.debugExternalLibraries": false,
+  "dart.debugSdkLibraries": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "workbench.preferredDarkColorTheme": "Material Theme Darker",
+  "workbench.preferredHighContrastColorTheme": "Material Theme High Contrast",
+  "window.autoDetectHighContrast": false,
+  "workbench.colorTheme": "Shades of Purple",
+  "todo-tree.tree.showScanModeButton": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+  "typescript.format.placeOpenBraceOnNewLineForFunctions": true,
+  "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "mochaExplorer.files": "test/**/*test..ts",
+  "mochaExplorer.require": "ts-node/register",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  // Duration in milliseconds for the cursor to travel from one character position (or line) to the next.
+  "smoothtype.duration": 80,
+  // Ask before restarting after a command is successfully run.
+  "smoothtype.autoReload": false
+}
