@@ -11,7 +11,8 @@ error_message="""\n
 
 ([ -z "$1" ] || [ -z "$2" ]) && echo -e $error_message && exit
 
-code_template=$(cat template.cpp) || (echo -e "$WARNING No cpp template file found in the root folder\n" && exit)
+script_dir=$(dirname "$0")
+code_template=$(cat $script_dir/template.cpp) || (echo -e "$WARNING No cpp template file found in the root folder\n" && exit)
 
 problem_set=(A B C D E F)
 extension="cpp"
@@ -19,7 +20,7 @@ round_name="$1_div_$2"
 
 pwd | cd
 mkdir $round_name
-cd $round_name
+cd "$round_name"
 
 for problem in ${problem_set[*]}; do
     echo "$code_template" >"$problem.$extension"
