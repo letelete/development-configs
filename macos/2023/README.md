@@ -73,3 +73,15 @@ Trackpad:
 - look up & data sectors: `force click with one finger`
 - secondary click: `click or tap with two fingers`
 - tap to click: `true`
+
+**Installation**
+Homebrew
+
+```
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+$ brew update
+```
+
+Git
+
+`$ brew install git`
