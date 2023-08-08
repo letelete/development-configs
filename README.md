@@ -1,1 +1,1 @@
-# bash-config
+# Personal configs
