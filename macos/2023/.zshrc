@@ -43,9 +43,9 @@ git config --global init.defaultBranch main
 # --- END GIT CONFIG ---
 
 # --- BEGIN NPM CONFIG ---
-npm set init.author.name "Bruno Kawka"
-npm set init.author.email "brunokawka@gmail.com"
-npm set init.author.url "kawka.me"
+npm set init-author-name "Bruno Kawka"
+npm set init-author-email "brunokawka@gmail.com"
+npm set init-author-url "https://kawka.me"
 # npm adduser
 # --- END NPM CONFIG ---
 
