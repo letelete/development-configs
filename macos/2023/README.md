@@ -90,7 +90,8 @@ brew install \
     git \
     node \
     npm \
-    wmctrl
+    wmctrl \
+    direnv
 
 npm install -g \
     npm \
