@@ -89,7 +89,8 @@ omz update
 brew install \
     git \
     node \
-    npm
+    npm \
+    wmctrl
 
 npm install -g \
     npm \

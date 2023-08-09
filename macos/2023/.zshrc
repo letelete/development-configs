@@ -69,3 +69,10 @@ archiveunpack() {
     gpg --use-embedded-filename $1.tar.gz.gpg && tar xf $1.tar.gz && rm -rf $1.tar.gz.gpg $1.tar.gz
 }
 # --- END GPG SYMMETRIC ARCHIVE COMPRESSION ---
+
+# --- BEGIN TELEGRAM SHARE FILE ---
+tgshare() {
+    /Applications/Telegram.app/Contents/MacOS/Telegram -sendpath "$(readlink -f "$1")"
+    wmctrl -x -a Telegram
+}
+# --- END TELEGRAM SHARE FILE ---
