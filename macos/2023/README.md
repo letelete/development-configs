@@ -77,11 +77,26 @@ Trackpad:
 **Installation**
 Homebrew
 
-```
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-$ brew update
-```
+```bash
+# brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew update
 
-Git
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+omz update
 
-`$ brew install git`
+brew install \
+    git \
+    node \
+    npm
+
+npm install -g \
+    npm \
+    corepack \
+    n \
+
+corepack enable
+corepack prepare yarn@stable --activate
+yarn set version stable
+```

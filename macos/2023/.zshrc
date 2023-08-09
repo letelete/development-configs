@@ -35,6 +35,20 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 for app in SystemUIServer Finder; do killall "$app" >/dev/null 2>&1; done
 # --- END SYSTEM CONFIG ---
 
+# --- BEGIN GIT CONFIG ---
+git config --global user.name "letelete"
+git config --global user.email "brunokawka@gmail.com"
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+git config --global init.defaultBranch main
+# --- END GIT CONFIG ---
+
+# --- BEGIN NPM CONFIG ---
+npm set init.author.name "Bruno Kawka"
+npm set init.author.email "brunokawka@gmail.com"
+npm set init.author.url "kawka.me"
+# npm adduser
+# --- END NPM CONFIG ---
+
 # --- BEGIN ANDROID CONFIG ---
 export ANDROID_HOME=/Users/brunokawka/Library/Android/sdk
 export ANDROID_SDK_ROOT=$ANDROID_HOME
