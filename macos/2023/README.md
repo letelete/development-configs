@@ -74,6 +74,10 @@ Trackpad:
 - secondary click: `click or tap with two fingers`
 - tap to click: `true`
 
+Lock Screen
+
+- require password after screen saved begins or display is turned off: `immediately`
+
 **Installation**
 Homebrew
 
