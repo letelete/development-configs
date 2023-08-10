@@ -1,3 +1,11 @@
+# --- BEGIN OMZ CONFIG ---
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+export ZSH="$HOME/.oh-my-zsh"
+
+source $ZSH/oh-my-zsh.sh
+# --- END OMZ CONFIG ---
+
 # --- BEGIN SYSTEM CONFIG ---
 
 # do not open previous previewed files (e.g. PDFs) when opening a new one
@@ -22,17 +30,10 @@ defaults write com.apple.finder ShowPathbar -bool true
 # show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
 
-# set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0.02
-
 # avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
-# require password immediately after sleep or screen saver begins
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
-
-for app in SystemUIServer Finder; do killall "$app" >/dev/null 2>&1; done
+for app in SystemUIServer Dock Finder; do killall "$app" >/dev/null 2>&1; done
 # --- END SYSTEM CONFIG ---
 
 # --- BEGIN GIT CONFIG ---
