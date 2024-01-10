@@ -41,6 +41,9 @@ git config --global user.name "letelete"
 git config --global user.email "brunokawka@gmail.com"
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 git config --global init.defaultBranch main
+
+alias push='git push origin "$(git symbolic-ref --short HEAD)"'
+alias pull='git pull origin "$(git symbolic-ref --short HEAD)"'
 # --- END GIT CONFIG ---
 
 # --- BEGIN NPM CONFIG ---
