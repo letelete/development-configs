@@ -1,0 +1,123 @@
+{
+  "sep": {
+    "prefix": "rsep",
+    "body": [
+      "/* -------------------------------------------------------------------------------------------------",
+      " * $1",
+      " * -----------------------------------------------------------------------------------------------*/",
+      "",
+      "$2"
+    ],
+    "description": "Create **Radix-like Separator Header**. @see {@link https://github.com/radix-ui/primitives | Radix-UI Primitives}."
+  },
+  "seppart": {
+    "prefix": "rseppart",
+    "body": [
+      "",
+      "/* -----------------------------------------------------------------------------------------------*/",
+      "",
+      "$2"
+    ],
+    "description": "Create **Radix-like Separator Partial**. @see {@link https://github.com/radix-ui/primitives | Radix-UI Primitives}."
+  },
+  "race": {
+    "prefix": "rrace",
+    "body": [
+      "/* -------------------------------------------------------------------------------------------------",
+      " * $1",
+      " * -----------------------------------------------------------------------------------------------*/",
+      "",
+      "interface ${1}Props {",
+      "  className?: string;",
+      "}",
+      "",
+      "const $1 = ({ className }: ${1}Props) => {",
+      " return <div className={cn('', className)}></div>;$0",
+      "}",
+      "${1}.displayName = '$1'",
+      "",
+      "/* -----------------------------------------------------------------------------------------------*/",
+      "",
+      "export { $1 }",
+      "export type { $1Props }"
+    ],
+    "description": "Create **Radix-like React Arrow Component**."
+  },
+  "rafce": {
+    "prefix": "rrafce",
+    "body": [
+      "/* -------------------------------------------------------------------------------------------------",
+      " * $1",
+      " * -----------------------------------------------------------------------------------------------*/",
+      "",
+      "interface ${1}Props {",
+      "className?: string;",
+      "}",
+      "",
+      "const $1 = forwardRef<ElementRef<'div'>, ${1}Props>(({ className }: ${1}Props) => {",
+      " return <div className={cn('', className)}></div>;$0",
+      "});",
+      "${1}.displayName = '$1'",
+      "",
+      "/* -----------------------------------------------------------------------------------------------*/",
+      "",
+      "export { $1 }",
+      "export type { $1Props }"
+    ],
+    "description": "Create **Radix-like React Arrow Forward ref Component**."
+  },
+  "rac": {
+    "prefix": "rac",
+    "body": [
+      "interface ${1}Props {",
+      "className?: string;",
+      "}",
+      "",
+      "const $1 = ({ className }: ${1}Props) => {",
+      " return <div className={cn('', className)}></div>;$0",
+      "}",
+      "${1}.displayName = '$1'",
+      "",
+      "export { $1 }",
+      "export type { $1Props }"
+    ],
+    "description": "Create **React Arrow Component**"
+  },
+  "rafc": {
+    "prefix": "rafc",
+    "body": [
+      "interface ${1}Props {",
+      "className?: string;",
+      "}",
+      "",
+      "const $1 = forwardRef<ElementRef<'div'>, ${1}Props>(({ className }, ref) => {",
+      " return <div ref={ref} className={cn('', className)}></div>;$0",
+      "});",
+      "${1}.displayName = '$1'",
+      "",
+      "export { $1 }",
+      "export type { $1Props }"
+    ],
+    "description": "Create **React Arrow Forward ref Component**."
+  },
+  "story": {
+    "prefix": "story",
+    "description": "Create a **Storybook** template",
+    "body": [
+      "import type { Meta, StoryObj } from '@storybook/react';",
+      "",
+      "const meta = {",
+      "  args: {},",
+      "  component: $1,",
+      "} satisfies Meta<typeof $1>;",
+      "",
+      "export default meta;",
+      "",
+      "type Story = StoryObj<typeof meta>;",
+      "",
+      "export const Default: Story = {",
+      "  args: {},",
+      "};"
+    ]
+  }
+}
