@@ -3,7 +3,7 @@
 **Apps**
 
 - karabiner-elements
-- alfred
+- raycast
 - rectangle
 - bitwarden
 - coconutBattery
