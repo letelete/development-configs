@@ -80,10 +80,3 @@ archive_unpack() {
         shred -vzun 13 "$1.tar.gz.gpg" "$1.tar.gz"
 }
 # --- END GPG SYMMETRIC ARCHIVE COMPRESSION ---
-
-# --- BEGIN TELEGRAM SHARE FILE ---
-tgshare() {
-    /Applications/Telegram.app/Contents/MacOS/Telegram -sendpath "$(readlink -f "$1")"
-    wmctrl -x -a Telegram
-}
-# --- END TELEGRAM SHARE FILE ---

@@ -19,12 +19,8 @@
 
 - firefox (developer edition)
 - brave
-
 - figma
-- adobexd
-
 - telegram
-- slack
 
 **Settings**
 General:
