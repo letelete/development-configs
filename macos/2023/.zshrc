@@ -65,13 +65,19 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 
 # --- BEGIN GPG SYMMETRIC ARCHIVE ---
 # Input: $1 - directory name
-archivepack() {
-    tar cfz $1.tar.gz $1 && gpg -o $1.tar.gz.gpg --symmetric --no-symkey-cache $1.tar.gz && rm -rf $1 $1.tar.gz
+archive_pack() {
+    tar cfz "$1.tar.gz" "$1" &&
+        gpg -o "$1.tar.gz.gpg" --symmetric --cipher-algo aes256 --digest-algo sha256 --cert-digest-algo sha256 --compress-algo none -z 0 --s2k-mode 3 --s2k-digest-algo sha512 --s2k-count 65011712 --force-mdc --quiet --no-greeting --pinentry-mode=loopback --no-symkey-cache "$1.tar.gz" &&
+        find "$1" -type f -exec shred -vzun 34 {} \; &&
+        rm -rf "$1" &&
+        shred -vzun 34 "$1.tar.gz"
 }
 
 # Input: $1 - directory name
-archiveunpack() {
-    gpg --use-embedded-filename $1.tar.gz.gpg && tar xf $1.tar.gz && rm -rf $1.tar.gz.gpg $1.tar.gz
+archive_unpack() {
+    gpg -d --use-embedded-filename "$1.tar.gz.gpg" &&
+        tar xf "$1.tar.gz" &&
+        shred -vzun 34 "$1.tar.gz.gpg" "$1.tar.gz"
 }
 # --- END GPG SYMMETRIC ARCHIVE COMPRESSION ---
 
