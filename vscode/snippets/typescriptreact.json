@@ -119,5 +119,46 @@
       "  args: {},",
       "};"
     ]
+  },
+  "rctx": {
+    "prefix": "rctx",
+    "description": "Create a **React Context API** template (React 18)",
+    "body": [
+      "interface ${1}ContextState {",
+      "$2",
+      "}",
+      "",
+      "const ${1}Context = createContext<null | ${1}ContextState>(null);",
+      "",
+      "const use${1}Context = () => {",
+      "const context = useContext(${1}Context);",
+      "",
+      "if (!context) {",
+      "throw new Error(",
+      "`\\`${1}Context\\` must be used within \\`$use${1}Context\\``",
+      ");",
+      "}",
+      "",
+      "return context;",
+      "};",
+      "use${1}Context.displayName = 'use${1}Context';",
+      "",
+      "const ${1}ContextProvider = ({",
+      "children,",
+      "...props",
+      "}: PropsWithChildren<${1}ContextState>) => {",
+      "const contextValue = useMemo(() => ({ ...props }), [props]);",
+      "",
+      "return (",
+      "<${1}Context.Provider value={contextValue}>",
+      "{children}",
+      "</${1}Context.Provider>",
+      ");",
+      "};",
+      "${1}ContextProvider.displayName = '${1}ContextProvider';",
+      "",
+      "export type { ${1}ContextState };",
+      "export { use${1}Context };"
+    ]
   }
 }
