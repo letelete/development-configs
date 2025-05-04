@@ -1,0 +1,60 @@
+# Brewfile
+
+# --- DEVELOPMENT ---
+# Load/unload environment variables based on $PWD
+brew "direnv"
+# Node version management
+brew "n"
+# GitHub command-line tool
+brew "gh"
+# Simplified and community-driven man pages
+brew "tldr"
+# Rust-based terminal
+cask "warp"
+# Open-source code editor
+cask "visual-studio-code"
+# Collaboration platform for API development
+cask "postman"
+# Platform built on V8 to build network applications
+brew "node"
+# Fast, disk space efficient package manager
+brew "pnpm"
+# Pack, ship and run any application as a lightweight container
+cask "docker"
+# Object-relational database system
+brew "postgresql@17", restart_service: true
+
+
+# --- UTILITIES ---
+# Modify keybindings
+cask "karabiner-elements"
+# Spotlight replacement
+cask "raycast"
+# Window snapping tool
+cask "rectangle"
+# Desktop password and login vault
+cask "bitwarden"
+# Show live information about the batteries in various devices
+cask "coconutbattery"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+
+# --- OTHER ---
+# Web browser
+cask "firefox@developer-edition"
+# Web browser
+cask "brave-browser"
+# Collaborative design software
+cask "figma"
+# Collection of apps and services for photography, design, video, web, and UX
+cask "adobe-creative-cloud"
+# Messaging app with a focus on speed and security
+cask "telegram"
+# Native desktop app for Messenger (formerly Facebook Messenger)
+cask "messenger"
+# Music streaming service
+cask "spotify"
+# Flip clock screensaver
+cask "fliqlo"
+# App to write, plan, collaborate, and get organised
+cask "notion"
