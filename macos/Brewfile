@@ -24,7 +24,6 @@ cask "docker"
 # Object-relational database system
 brew "postgresql@17", restart_service: true
 
-
 # --- UTILITIES ---
 # Modify keybindings
 cask "karabiner-elements"
@@ -38,6 +37,8 @@ cask "bitwarden"
 cask "coconutbattery"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
+# Records audio from any application
+cask "audio-hijack"
 
 # --- OTHER ---
 # Web browser
